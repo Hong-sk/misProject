@@ -2,10 +2,9 @@
 <p> 바닐라 자바스크립트를 이용한 간단한 게임을 구현했습니다! </p>
 
 <p>
-  
-<img src="http://img.shields.io/badge/-HTML-E34F26?style=plastic&logo=HTML5" />
-<img src="http://img.shields.io/badge/-CSS-1572B6?style=plastic&logo=CSS3" />
-<img src="http://img.shields.io/badge/-JavaScript-F7DF1E?style=plastic&logo=Javascript" />
+<img src="https://img.shields.io/badge/-HTML-E34F26?style=plastic&logo=HTML5&logoColor=white"/>&nbsp
+<img src="http://img.shields.io/badge/-CSS-1572B6?style=plastic&logo=CSS3" />&nbsp
+<img src="https://img.shields.io/badge/-Javascript-F7DF1E?style=plastic&logo=javascript&logoColor=white"/>&nbsp
 
 </p>
 
