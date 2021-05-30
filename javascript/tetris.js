@@ -76,14 +76,7 @@ function init(){
     drawField();
     initExistField();
     setWall();
-    nextColorIndex = -1;
-    movingSpeed = initSpeed;
-    shapeCell=[];
-    shapePoint=[1,1];
-    score=0; level=1;
-    chooseNextShape();
-    chooseNextColor();
-    createShape();
+    
 }
 
 function gebi(y,x){
