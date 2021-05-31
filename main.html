@@ -4,30 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main</title>
+    <title>Document</title>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&family=Sigmar+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
-  <body>
-    <header>
-      <a href="https://github.com/Hong-sk/misProject">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://github.com/Hong-sk/misProject">
-        <i class="far fa-user"></i>
-      </a>
-    </header>
 
-    <iframe src="./wave/wave.html"></iframe>
-    <a href="team.html">
-      <div class="title">Simple javascript games</div>
+  <body>
+    <a href="javascript:link('games.html')">
+      <div class="title"><u>hello, World</u></div>
     </a>
+    <h2 id="introduction">
+      <p><u>어떤 내용을 입력할까요 여러분들의 의견을 받을까 합니다.</u></p>
+      <br />
+      <p><u>좋은 의견이 있으시다면 말씀부탁드려요. 항상 감사합니다.</u></p>
+      <br />
+      <p><u>그리고 폰트 추천좀요.</u></p>
+    </h2>
+
+    <div id="space"></div>
+
+    <img
+      src="images/cloud.png"
+      width="100"
+      height="100"
+      class="cloud"
+      id="cloud"
+    />
+    <img
+      src="images/clouds.png"
+      width="150"
+      height="150"
+      class="clouds"
+      id="clouds"
+    />
+    <img src="images/sun.png" width="100" height="100" class="sun" />
+    <img
+      src="images/office-building.png"
+      width="200"
+      height="200"
+      class="building"
+      id="blue-building"
+    />
+    <img
+      src="images/building.png"
+      width="300"
+      height="300"
+      class="building"
+      id="buildings"
+    />
+    <img
+      src="images/flat.png"
+      width="100"
+      height="100"
+      class="building"
+      id="yellow-building"
+    />
+    <img src="images/cycling.png" width="100" height="100" class="cycle" />
+
+    <footer></footer>
+
+    <script>
+      function link(URL) {
+        setTimeout(function () {
+          window.location = URL;
+        }, 1700);
+      }
+    </script>
+
     <script
       src="https://kit.fontawesome.com/f41eb0434a.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="javascript/main.js"></script>
   </body>
 </html>
