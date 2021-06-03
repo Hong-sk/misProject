@@ -42,15 +42,15 @@ var tileColor = "rgb(9,17,26)",
 var shapeColorIndex, nextColorIndex;
 var movingThread, movingSpeed;
 var fastMode = false;
-var initSpeed = 600,
+var initSpeed = 500,
     deltaSpeed = 40,
-    fastSpeed = 40 ;
+    fastSpeed = 20 ;
 var shapeCell;
 var existField;
 var shapePoint;
 var createPoint=[1,parseInt(W/2)-2];
 var currentShape, nextShape;
-var score, level, levelStack=0;
+var score, level=1, levelStack=0;
 var isPaused = false;
 
 init();

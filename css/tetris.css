@@ -17,6 +17,7 @@ td {
     margin-top: 1.9px;
     margin-left: 3px;
     width: 100px;
+
 }
 #score, #level{
     font-size: 28px;
@@ -43,9 +44,12 @@ td {
 #nextTable{
     float: right;
     margin: 0px;
-    position: absolute;
-    left: 402px;
-    top: 358px;
+    position: relative;
+    top: 325px;
+    right: 100px;
+    width : 100px;
+    height : 100px;
+
 }
 #help{
     font-size: 18px;
@@ -63,5 +67,12 @@ td {
     text-align: center;
     font-size: 22px;
     font-weight: bold;
+    color: white;
+}
+#pause, #gameover{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    visibility: hidden;
     color: white;
 }
