@@ -16,6 +16,7 @@ a:active,
 a:visited {
   text-decoration: none;
   color: black;
+  outline: none;
 }
 
 .title {
@@ -44,10 +45,11 @@ a:visited {
   animation-delay: 2.5s;
 }
 
+cite {
+  text-decoration: underline;
+}
 footer {
   position: absolute;
-  display: flex;
-  align-items: center;
   bottom: 0px;
   width: 100%;
   height: 90px;
@@ -64,16 +66,10 @@ footer {
   }
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  outline: none;
-}
-
 img {
   position: absolute;
 }
-.cycle {
+#cycle {
   left: -20%;
   z-index: 2;
   bottom: 11%;
@@ -90,16 +86,16 @@ img {
     left: 22%;
   }
 }
+.building {
+  animation: up 0.5s;
+  animation-fill-mode: forwards;
+}
 #blue-building {
   bottom: -50%;
   left: 9%;
-  animation: up 0.5s;
-  animation-fill-mode: forwards;
+  /* animation: up 0.5s;
+  animation-fill-mode: forwards; */
   animation-delay: 1.2s;
-}
-#blue-building:hover {
-  transition: transform 0.1s linear;
-  transform: scaleY(1.1);
 }
 @keyframes up {
   from {
@@ -112,20 +108,20 @@ img {
 #buildings {
   bottom: -50%;
   left: 70%;
-  animation: up 0.5s;
-  animation-fill-mode: forwards;
+  /* animation: up 0.5s;
+  animation-fill-mode: forwards; */
   animation-delay: 1.5s;
 }
 
 #yellow-building {
   bottom: -50%;
   left: 50%;
-  animation: up 0.5s;
-  animation-fill-mode: forwards;
+  /* animation: up 0.5s;
+  animation-fill-mode: forwards; */
   animation-delay: 1.6s;
 }
 
-.sun {
+#sun {
   opacity: 0;
   left: 90%;
   top: 7%;
@@ -150,23 +146,106 @@ img {
   animation-fill-mode: forwards;
   animation-delay: 1.6s;
 }
-.box {
-  z-index: 1000;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background-color: powderblue;
-  animation: move 1.5s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
 @keyframes move {
   from {
   }
   to {
     left: 0%;
     top: 0%;
+  }
+}
+
+.buildings-disapear {
+  animation: building-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes building-down {
+  0% {
+    bottom: 11%;
+  }
+  100% {
+    bottom: -45%;
+  }
+}
+.footer-disapear {
+  animation: footer-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes footer-down {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: -45%;
+  }
+}
+.cycle-disapear {
+  animation: cycle-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes cycle-down {
+  0% {
+    left: 22%;
+    bottom: 11%;
+  }
+  100% {
+    left: 22%;
+    bottom: -45%;
+  }
+}
+.title-disapear {
+  animation: title-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes title-down {
+  0% {
+    opacity: 1;
+    top: 19%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+.description-disapear {
+  animation: description-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes description-down {
+  0% {
+    opacity: 1;
+    top: 38%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+.sky-disapear {
+  animation: sky-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes sky-down {
+  0% {
+    opacity: 1;
+    top: 7%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+.clouds-disapear {
+  animation: clouds-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes clouds-down {
+  0% {
+    opacity: 1;
+    top: 15%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
   }
 }
