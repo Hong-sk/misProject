@@ -2,7 +2,7 @@ var body = document.body;
 var table = document.createElement("table");
 var rows = [];
 var squares = [];
-var turn = "X";
+var turn = "x";
 
 for(var i=0; i<3; i++) {
     var tr = document.createElement("tr");
@@ -33,11 +33,46 @@ function game(e) {
         var full = false;
 
         if(
-        squares[0][yourSquare].textContent == turn &&
-        squares[1][yuorSquare].textContent == turn &&
-        squares[2][yuorSquare].textContent == turn
+            squares[0][yourSquare].textContent == turn &&
+            squares[1][yourSquare].textContent == turn &&
+            squares[2][yourSquare].textContent == turn
         ) {
             full = true;
+        }
+
+        if(
+            squares[yourRow][0].textContent == turn &&
+            squares[yourRow][1].textContent == turn &&
+            squares[yourRow][2].textContent == turn
+        ) {
+            full = true;
+        }
+        if(yourRow - yourSquare == 0 || Math.abs(yourRow - yourSquare) == 2) {
+            if(
+            squares[0][0].textContent == turn &&
+            squares[1][1].textContent == turn &&
+            squares[2][2].textContent == turn
+        ) {
+            full = true;
+            }
+        }
+
+        if (full) {
+            alert(turn + "님이 승리!");
+            turn = "x";
+            squares.forEach(function (rows) {
+                rows.forEach(function (square) {
+                    square.textContent = "";
+                });
+            });
+        }
+
+        else {
+            if (turn === "x") {
+                turn = "o";
+            } else {
+                turn = "x";
+            }
         }
     }
 }
