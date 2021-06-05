@@ -129,6 +129,10 @@ img {
   animation-fill-mode: forwards;
   animation-delay: 1.2s;
 }
+#sun:hover {
+  transition: transform 1.5s ease-in-out;
+  transform: rotate(360deg);
+}
 
 #cloud {
   opacity: 0;

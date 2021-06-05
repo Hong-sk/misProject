@@ -52,7 +52,8 @@ function createStars() {
     stars[i].style.height = stars[i].style.width;
     stars[i].style.borderRadius = "50%";
     stars[i].style.top = parseFloat(Math.random() * 100) + "%";
-    stars[i].style.left = parseFloat(Math.random() * 100) + "%";
+    //양옆으로 움직이기 때문에 가로스크롤 생기는 거 방지하기 위해 100보다 작은 수 입력
+    stars[i].style.left = parseFloat(Math.random() * 98) + "%";
     stars[i].style.backgroundColor = setStarColor();
     fragment.appendChild(stars[i]);
   }
