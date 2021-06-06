@@ -17,64 +17,24 @@ body {
 img {
   position: absolute;
   left: -10%;
-  bottom: 14%;
+  bottom: 15%;
   z-index: 1;
-  animation-duration: 5s, 1.5s;
+  /* animation-duration: 5s, 1.5s;
   animation-iteration-count: 1, infinite;
   animation-fill-mode: forwards, forwards;
-  animation-timing-function: linear;
-}
-
-@keyframes go-right1 {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 80%;
-  }
-}
-@keyframes go-right2 {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 60%;
-  }
-}
-@keyframes go-right3 {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 40%;
-  }
-}
-@keyframes go-right4 {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 20%;
-  }
-}
-@keyframes go-right5 {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 0%;
-  }
+  animation-timing-function: linear; */
 }
 
 @keyframes float {
   0% {
-    transform: none;
+    bottom: 15%;
   }
   50% {
-    transform: translateY(30px);
+    /* transform: translateY(30px); */
+    bottom: 21%;
   }
   100% {
-    transform: none;
+    bottom: 15%;
   }
 }
 

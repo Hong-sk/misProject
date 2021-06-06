@@ -9,24 +9,25 @@ function init() {
   showCard();
 }
 
+//옆으로 이동하는 거 없는 버전 x
 function showCard() {
   for (i = 0; i < cards.length; i++) {
-    cards[i].style.animation = `go-right${i}, float`;
-    cards[i].style.animationDelay = `${i}s, 0s`;
-    cards
+    cards[i].style.left = i * 20 + 5 + "%";
+    cards[i].style.animation = `float`;
+    cards[i].style.animationDelay = 0.05 + 0.2 * i + "s";
+    cards[i].style.animationDuration = "1s";
+    cards[i].style.animationIterationCount = "infinite";
+    cards[i].style.animationFillMode = "forwards";
+    cards[i].style.animationTimingFunction = "linear";
   }
 }
-
-animation-duration: 5s, 1.5s;
-  animation-iteration-count: 1, infinite;
-  animation-fill-mode: forwards, forwards;
-  animation-timing-function: linear;
 
 function makeWave() {
   for (i = 0; i < 100; i++) {
     var wave = document.createElement("div");
     wave.classList.add("wave");
     waves.push(wave);
+    waves[i].style.border = "1px solid black";
     waves[i].style.left = i + "%";
     waves[i].style.animation = "waving";
     waves[i].style.animationDelay = `${(1 / 100) * i}s`;
