@@ -44,7 +44,7 @@ var movingThread, movingSpeed;
 var fastMode = false;
 var initSpeed = 500,
     deltaSpeed = 40,
-    fastSpeed = 20 ;
+    fastSpeed = 10 ;
 var shapeCell;
 var existField;
 var shapePoint;
@@ -163,7 +163,7 @@ function createShape(){
     leveling();
     movingThread = setTimeout("moveDown()",movingSpeed);
 }
-
+//다음 도형 생성부분
 function displayNextShape(){
     initNextTable();
     var shape = shapeArray[nextShape];
@@ -196,7 +196,7 @@ function moveDown(){
     showShape();
     movingThread = setTimeout("moveDown()",movingSpeed);
 }
-
+//회전
 function rotateShape(){
     if(!canRotate()) return;
     removeShape();
@@ -220,7 +220,7 @@ function canRotate(){
     }
     return true;
 }
-
+//벽을 넘어가지 않게 함
 function isValidPoint(y,x){
     return !(y<=0 || y>=H-1 || x<=0 || x>=W-1 || existField[y][x]);
 }
@@ -240,6 +240,7 @@ function showShape(){
 }
 
 function canMove(dy,dx){
+
     for(var i=0;i<shapeCell.length;i++){
         var ny = shapeCell[i][0]+dy;
         var nx = shapeCell[i][1]+dx;
