@@ -48,7 +48,8 @@ body {
 }
 
 h1,
-.games-board {
+.games-board,
+.left-btn {
   animation: fadeIn 2s ease-in-out;
   animation-delay: 3s;
   animation-fill-mode: forwards;
@@ -71,6 +72,13 @@ h1 {
   /* box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
   border-radius: 20px;
   z-index: 1;
+}
+.left-btn {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 30px;
+  height: 30px;
 }
 .card {
   background-color: #f6f9fc;

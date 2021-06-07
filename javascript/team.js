@@ -22,19 +22,19 @@ function showCard() {
   }
 }
 
+// loop 횟수를 높일수록 보다 더 자연스러운 파도 연출 가능하나 화면에 버벅거리는 현상 발견하여 250으로 설정
 function makeWave() {
-  for (i = 0; i < 100; i++) {
+  for (i = 0; i < 250; i++) {
     var wave = document.createElement("div");
     wave.classList.add("wave");
     waves.push(wave);
-    waves[i].style.border = "1px solid black";
-    waves[i].style.left = i + "%";
+    waves[i].style.left = 0.4 * i + "%";
     waves[i].style.animation = "waving";
-    waves[i].style.animationDelay = `${(1 / 100) * i}s`;
+    waves[i].style.animationDelay = `${(1 / 250) * i}s`;
     waves[i].style.animationDuration = "1s";
     waves[i].style.animationIterationCount = "infinite";
   }
-  for (i = 0; i < 100; i++) {
+  for (i = 0; i < 250; i++) {
     body.append(waves[i]);
   }
 }
