@@ -1,5 +1,40 @@
 td {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 32px;
+    background-color: white;
+    border-radius: 7px;
+    color: #64b3f4;
+    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#c2e59c,#64b3f4);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
