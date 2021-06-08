@@ -57,7 +57,9 @@ function game(e) {
       }
     }
     for (var k = 0; k < 3; k++) {
-      draw = squares[k].every(checkDraw);
+      if (full == false) {
+        draw = squares[k].every(checkDraw);
+      }
     }
     if (draw) {
       alert("무승부입니다!");
