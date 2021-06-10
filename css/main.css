@@ -66,27 +66,10 @@ footer {
   }
 }
 
-img {
+img:not(.dd) {
   position: absolute;
 }
-#cycle {
-  width: 8.5%;
-  left: -20%;
-  z-index: 2;
-  bottom: 11%;
-  animation: cycle 0.8s linear;
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
-}
 
-@keyframes cycle {
-  from {
-    left: -20%;
-  }
-  to {
-    left: 22%;
-  }
-}
 .building {
   animation: up 0.5s;
   animation-fill-mode: forwards;
@@ -190,20 +173,7 @@ img {
     bottom: -45%;
   }
 }
-.cycle-disapear {
-  animation: cycle-down 1.5s ease-in-out !important;
-  animation-fill-mode: forwards !important;
-}
-@keyframes cycle-down {
-  0% {
-    left: 22%;
-    bottom: 11%;
-  }
-  100% {
-    left: 22%;
-    bottom: -45%;
-  }
-}
+
 .title-disapear {
   animation: title-down 1.5s ease-in-out !important;
   animation-fill-mode: forwards !important;
@@ -260,3 +230,102 @@ img {
     top: 100%;
   }
 }
+
+.car-disapear {
+  animation: car-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes car-down {
+  0% {
+    left: 25%;
+    bottom: 13%;
+  }
+  100% {
+    left: 25%;
+    bottom: -45%;
+  }
+}
+
+.caricon {
+  position: absolute;
+  left: -20%;
+  bottom: 13%;
+  animation: car 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes car {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 25%;
+  }
+}
+.caricon img {
+  width: 100%;
+}
+.caricon .dd {
+  width: 50%;
+  z-index: 15;
+}
+.caricon .tire01 {
+  position: absolute;
+  bottom: -17%;
+  left: 7.4%;
+  width: 10%;
+  z-index: 3;
+}
+.caricon .tire02 {
+  position: absolute;
+  bottom: -17%;
+  left: 36.5%;
+  width: 10%;
+  z-index: 3;
+}
+
+.tire-rotate {
+  animation: tire-rotate 0.5s linear 3;
+  animation-fill-mode: forwards;
+}
+@keyframes tire-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* #cycle {
+  width: 8.5%;
+  left: -20%;
+  z-index: 2;
+  bottom: 11%;
+  animation: cycle 0.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.cycle-disapear {
+  animation: cycle-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes cycle-down {
+  0% {
+    left: 22%;
+    bottom: 11%;
+  }
+  100% {
+    left: 22%;
+    bottom: -45%;
+  }
+}
+@keyframes cycle {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 22%;
+  }
+} */
