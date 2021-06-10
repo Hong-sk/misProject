@@ -48,8 +48,7 @@ body {
 }
 
 h1,
-.games-board,
-.left-btn {
+.games-board {
   animation: fadeIn 2s ease-in-out;
   animation-delay: 3s;
   animation-fill-mode: forwards;
@@ -59,60 +58,67 @@ h1,
 
 h1 {
   font-family: "Odibee Sans", cursive;
-  font-size: 60px;
-  margin-bottom: 50px;
+  font-size: 3.75rem;
+  margin-bottom: 10vh;
 }
 .games-board {
-  width: 1200px;
-  height: 750px;
+  width: 80vw;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: transparent;
-  /* box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
-  border-radius: 20px;
+  border-radius: 5%;
   z-index: 1;
 }
 .left-btn {
   position: absolute;
   top: 3%;
   left: 3%;
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
+  animation: semi-fadeIn 2s ease-in-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  color: white;
+  opacity: 0;
 }
 .card {
   background-color: #f6f9fc;
-  width: 410px;
-  height: 310px;
-  margin: 30px 50px;
+  width: 26vw;
+  height: 40vh;
+  margin: 8vh 5vw;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  border-radius: 5%;
   text-align: center;
   opacity: 0.7;
+  overflow: hidden;
 }
 
 .card:nth-child(1):hover {
-  border: 3px solid #ff9999;
+  border: 0.3vw solid #ff9999;
 }
 .card:nth-child(2):hover {
-  border: 3px solid #ffc25c;
+  border: 0.3vw solid #ffc25c;
 }
 .card:nth-child(3):hover {
-  border: 3px solid #99da9d;
+  border: 0.3vw solid #99da9d;
 }
 .card:nth-child(4):hover {
-  border: 3px solid #99ffff;
+  border: 0.3vw solid #99ffff;
 }
 
-img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-shadow: 0 1px rgba(50, 50, 93, 0.11);
+.game-image {
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  width: 26vw;
+  height: 28vh;
 }
+
 .game-name {
   font-family: "Odibee Sans", cursive;
-  font-size: 24px;
-  margin: 10px 0px;
+  font-size: 1.5rem;
+  margin: 1.5vh 0;
 }
 h3 {
   font-family: "Nanum Gothic Coding", monospace;
@@ -120,7 +126,6 @@ h3 {
 
 .star {
   position: absolute;
-  /* background-color: white; */
   filter: blur(3px);
   animation: fadeIn 2.9s ease-in-out;
 }
@@ -132,7 +137,14 @@ h3 {
     opacity: 1;
   }
 }
-
+@keyframes semi-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
 .scale {
   animation: scale 1s linear;
   animation-iteration-count: infinite;

@@ -48,7 +48,7 @@ function createStars() {
     const star = document.createElement("div");
     star.classList.add("star");
     stars.push(star);
-    stars[i].style.width = Math.random() * 20 + "px";
+    stars[i].style.width = Math.random() + "%";
     stars[i].style.height = stars[i].style.width;
     stars[i].style.borderRadius = "50%";
     stars[i].style.top = parseFloat(Math.random() * 100) + "%";

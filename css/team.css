@@ -22,11 +22,14 @@ body {
   overflow: hidden;
   background-color: #515e7b;
 }
-
+a #moon {
+  width: 7vw;
+  height: 7vw;
+}
 .card {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 9vw;
+  height: 9vw;
   left: -10%;
   bottom: 15%;
   z-index: 1;
@@ -38,17 +41,23 @@ body {
   background-color: #ced6e0;
   border-radius: 10%;
 }
+
+.card img {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
 .img2048 {
-  width: 50px;
-  height: 50px;
+  width: 3.5vw;
+  height: 3.5vw;
   background-color: #bbada0;
   color: #141518;
   text-align: center;
-  line-height: 50px;
-  border-radius: 10px;
+  line-height: 3.5vw;
+  border-radius: 18%;
 }
 p {
-  margin-top: 8px;
+  margin-top: 5%;
 }
 @keyframes float {
   0% {
