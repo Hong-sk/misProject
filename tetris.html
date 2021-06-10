@@ -1,6 +1,4 @@
 <!--출처: https://yjyoon-dev.github.io/project/2020/11/19/jsgame-tetris/
-    변동사항 : 다음 블럭 보여지는 위치가 이상한 위치에 있는 문제 --코드 수정
-
 -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,30 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>테트리스</title>
-    <link rel='stylesheet' type ="text/css" href='css/tetris.css'>
-
-</head>
-<body>
-
-  <div id="gameField">
-    <div id="gameover">
+    <link rel="stylesheet" type="text/css" href="css/tetris.css" />
+  </head>
+  <body>
+    <div id="gameField">
+      <div id="gameover">
         <div>
-            <h1>Game Over</h1>
-            <h4>press 'F5' to restart</h4>
+          <h1>Game Over</h1>
+          <h4>press 'F5' to restart</h4>
         </div>
-    </div>
-    <div id="pause">
+      </div>
+      <div id="pause">
         <div>
-            <h1>Pause</h1>
-            <h4>press 'F5' to resume</h4>
+          <h1>Pause</h1>
+          <h4>press 'F5' to resume</h4>
         </div>
+      </div>
+      <table id="nextTable" border="0">
+        <tr>
+          <td id="00"></td>
+          <td id="01"></td>
+          <td id="02"></td>
+          <td id="03"></td>
+        </tr>
+        <tr>
+          <td id="10"></td>
+          <td id="11"></td>
+          <td id="12"></td>
+          <td id="13"></td>
+        </tr>
+        <tr>
+          <td id="20"></td>
+          <td id="21"></td>
+          <td id="22"></td>
+          <td id="23"></td>
+        </tr>
+        <tr>
+          <td id="30"></td>
+          <td id="31"></td>
+          <td id="32"></td>
+          <td id="33"></td>
+        </tr>
+      </table>
     </div>
-    <table id="nextTable" border=0>
-        <tr><td id="00"></td><td id="01"></td><td id="02"></td><td id="03"></td></tr>
-        <tr><td id="10"></td><td id="11"></td><td id="12"></td><td id="13"></td></tr>
-        <tr><td id="20"></td><td id="21"></td><td id="22"></td><td id="23"></td></tr>
-        <tr><td id="30"></td><td id="31"></td><td id="32"></td><td id="33"></td></tr>
-    </table>
     <div id="scoreField">
       <p class="sub">LEVEL</p>
       <p id="level">1</p>
@@ -48,5 +65,5 @@
       <div id="comboField"><i></i></div>
     </div>
     <script type="text/javascript" src="javascript/tetris.js"></script>
-</body>
+  </body>
 </html>
