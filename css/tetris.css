@@ -9,10 +9,10 @@ td {
 #gameField{
     margin-left: 20px;
     margin-top: 20px;
-    float: left;
+
 }
 #scoreField{
-    float: right;
+    float: left;
     background-color:  rgb(21,46,74);
     margin-top: 1.9px;
     margin-left: 3px;
@@ -42,11 +42,11 @@ td {
     color:rgb(199,82,82);
 }
 #nextTable{
-    float: right;
+    float: left;
     margin: 0px;
-    position: relative;
-    top: 325px;
-    right: 100px;
+    position: absolute;
+    top: 345px;
+    left: 30px;
     width : 100px;
     height : 100px;
 
