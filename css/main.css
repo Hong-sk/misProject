@@ -15,7 +15,6 @@ a:hover,
 a:active,
 a:visited {
   text-decoration: none;
-  color: black;
   outline: none;
 }
 
@@ -32,6 +31,10 @@ a:visited {
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
+.title:hover {
+  color: #a9d18e;
+}
+
 #introduction {
   z-index: 1000;
   opacity: 0;
