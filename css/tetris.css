@@ -1,78 +1,85 @@
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
 
-body{
-    background-color : black;
+body {
+  background-color: rgb(9, 17, 26);
 }
 td {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
-#gameField{
-    margin-left: 20px;
-    margin-top: 20px;
-    float: left;
+#gameField {
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
-#scoreField{
-    float: right;
-    background-color:  rgb(21,46,74);
-    margin-top: 1.9px;
-    margin-left: 3px;
-    width: 100px;
+#scoreField {
+  float: left;
+  background-color: rgb(21, 46, 74);
+  margin-top: 1.9px;
+  margin-left: 3px;
+  width: 100px;
+}
+#score,
+#level {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  height: 30px;
+}
+.sub {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  margin: 0px;
+}
 
+#nextTable {
+  float: left;
+  margin: 0px;
+  position: absolute;
+  top: 345px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
 }
-#score, #level{
-    font-size: 28px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    height: 30px;
+#help {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  height: 32px;
+  margin: 1px;
 }
-.sub{
-    font-size: 22px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    background-color: blue;
-    padding: 10px;
-    margin: 0px;
+#comboField {
+  position: absolute;
+  left: 27px;
+  top: 320px;
+  width: 384px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
 }
-#about{
-    font-size: 20px;
+#pause,
+#gameover {
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  visibility: hidden;
+  color: white;
 }
-#about:hover{
-    color:rgb(199,82,82);
-}
-#nextTable{
-    float: right;
-    margin: 0px;
-    position: relative;
-    top: 325px;
-    right: 100px;
-    width : 100px;
-    height : 100px;
-
-}
-#help{
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    height: 32px;
-    margin: 1px;
-}
-#comboField{
-    position: absolute;
-    left: 27px;
-    top: 320px;
-    width: 384px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-}
-#pause, #gameover{
-    position: absolute;
-    left: 200px;
-    top: 200px;
-    visibility: hidden;
-    color: white;
+i {
+  margin-right: 15px;
+  color: white;
 }
