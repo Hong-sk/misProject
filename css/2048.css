@@ -9,7 +9,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(#fd746c, #fd746c);
+  background-color: #cdc1b3;
+}
+p {
+  font-weight: bold;
+  font-size: 30px;
 }
 td {
   border-radius: 10px;
@@ -22,4 +26,31 @@ td {
   margin-bottom: 50px;
   font-size: 50px;
   color: aliceblue;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-btn {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  width: 2%;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.left-btn {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 2vw;
+  height: 2vw;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
