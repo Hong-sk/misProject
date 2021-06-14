@@ -1,5 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* 출처 : https://codepen.io/P1N2O/pen/pyBNzX */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #4568dc, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 td {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 32px;
+  background-color: white;
+  border-radius: 7px;
+  color: #64b3f4;
+  animation: fadeIn 1.5s ease-in-out;
+  opacity: 0;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  font-size: 50px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  color: white;
+  margin-bottom: 3%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-btn {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  width: 2%;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.left-btn {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 2vw;
+  height: 2vw;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }

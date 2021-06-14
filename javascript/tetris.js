@@ -73,21 +73,17 @@ function keyUpEventHandler(e){
 
 // 초기 설정
 function init(){
-    //필드초기화 초기설정
     drawField();
     initExistField();
     setWall();
-    //도형조작 초기설정
     nextColorIndex = -1;
     movingSpeed = initSpeed;
-    shapeCell =[];
-    shapePoint =[1,1];
-    //도형 생성 초기설정
+    shapeCell=[];
+    shapePoint=[1,1];
+    score=0; level=1;
     chooseNextShape();
     chooseNextColor();
     createShape();
-    //점수 초기설정
-    score=0; level=1;
 }
 
 function gebi(y,x){
@@ -104,7 +100,6 @@ function initExistField(){
         for(var j=0;j<W;j++)
             existField[i][j]=false;
 }
-//게임 필드 생성
 function drawField(){
     var fieldTag = "<table id=\"gameTable\" border=0>";
     for(var i=0;i<H;i++){
@@ -115,7 +110,6 @@ function drawField(){
     }
     document.write(fieldTag);
 }
-//바깥벽 생성
 function setWall(){
     for(var i=0;i<H;i++){
         gebi(i,0).style.background = wallColor;
@@ -130,17 +124,15 @@ function setWall(){
         existField[H-1][i]=true;
     }
 }
+
 // 도형 생성
-//다음 도형 랜덤 생성
 function chooseNextShape(){
     nextShape = parseInt(Math.random() * shapeArray.length);
 }
-//다음 도형 색상 선정
 function chooseNextColor(){
     if(++nextColorIndex == shapeColorArray.length)
         nextColorIndex=0;
 }
-//
 function createShape(){
     shapePoint[0] = createPoint[0];
     shapePoint[1] = createPoint[1];
@@ -163,7 +155,6 @@ function createShape(){
     leveling();
     movingThread = setTimeout("moveDown()",movingSpeed);
 }
-//다음 도형 생성부분
 function displayNextShape(){
     initNextTable();
     var shape = shapeArray[nextShape];
@@ -174,7 +165,6 @@ function displayNextShape(){
         document.getElementById(String(y)+String(x)).style.background = color;
     }
 }
-
 function initNextTable(){
     for(var i=0;i<4;i++)
         for(var j=0;j<4;j++)
@@ -196,7 +186,6 @@ function moveDown(){
     showShape();
     movingThread = setTimeout("moveDown()",movingSpeed);
 }
-//회전
 function rotateShape(){
     if(!canRotate()) return;
     removeShape();
@@ -210,7 +199,6 @@ function rotateShape(){
     }
     showShape();
 }
-
 function canRotate(){
     var tempShape = shapeArray[shapeRotateMap[currentShape]];
     for(var i=0;i<4;i++){
@@ -220,27 +208,22 @@ function canRotate(){
     }
     return true;
 }
-//벽을 넘어가지 않게 함
 function isValidPoint(y,x){
     return !(y<=0 || y>=H-1 || x<=0 || x>=W-1 || existField[y][x]);
 }
-
 function removeShape(){
     for(var i=0;i<shapeCell.length;i++){
         var el = gebi(shapeCell[i][0],shapeCell[i][1]);
         el.style.background = tileColor;
     }
 }
-
 function showShape(){
     for(var i=0;i<shapeCell.length;i++){
         var el = gebi(shapeCell[i][0],shapeCell[i][1]);
         el.style.background = shapeColor;
     }
 }
-
 function canMove(dy,dx){
-
     for(var i=0;i<shapeCell.length;i++){
         var ny = shapeCell[i][0]+dy;
         var nx = shapeCell[i][1]+dx;
@@ -248,7 +231,6 @@ function canMove(dy,dx){
     }
     return true;
 }
-
 function moveLR(delta){
     if(!canMove(0,delta) || isPaused) return;
     removeShape();
@@ -256,7 +238,6 @@ function moveLR(delta){
     shapePoint[1]+=delta;
     showShape();
 }
-//빠르게 내리기
 function moveFast(){
     if(fastMode) return;
     clearTimeout(movingThread);
@@ -264,7 +245,6 @@ function moveFast(){
     movingThread = setTimeout("moveDown()",movingSpeed);
     fastMode = true;
 }
-//빠르게 내리기 끝으로 천천히 내리기
 function moveSlow(){
     if(!fastMode) return;
     clearTimeout(movingThread);
@@ -274,7 +254,6 @@ function moveSlow(){
 }
 
 // 점수 판정
-
 function commitExist(){
     for(var i=0;i<shapeCell.length;i++){
         var y = shapeCell[i][0];
@@ -282,7 +261,6 @@ function commitExist(){
         existField[y][x]=true;
     }
 }
-//한줄 채워질시 전부 코드
 function checkLine(){
     var plusScore = level * 100;
     var combo = 0;
@@ -296,13 +274,11 @@ function checkLine(){
         if(combo > 0) displayCombo(combo, finalScore);
     }
 }
-//한줄 채워질시
 function isFull(lineIndex){
     for(var i=1;i<W-1;i++)
         if(!existField[lineIndex][i]) return false;
     return true;
 }
-//한줄 없앨시 내리기
 function removeLine(lineIndex){
     for(var i=lineIndex-1;i>=1;i--){
         for(var j=1;j<W-1;j++){
@@ -311,7 +287,6 @@ function removeLine(lineIndex){
         }
     }
 }
-//레벨 부여
 function leveling(){
     if(level==10) return;
     if(levelStack == level * 10){
@@ -322,19 +297,18 @@ function leveling(){
     }
     document.getElementById("level").innerHTML = level;
 }
-//점수 추가
 function updateScore(plusScore,combo){
     var comboScore = plusScore * combo;
     score += comboScore;
     document.getElementById("score").innerHTML = score;
     return comboScore;
 }
-//콤보 
 function displayCombo(combo, finalScore){
     var comboStr = combo +" COMBO +"+finalScore;
     document.getElementById("comboField").innerHTML = comboStr;
     setTimeout(function(){document.getElementById("comboField").innerHTML = "";},700);
 }
+
 // 종료 및 일시정지
 function gameOver(){
     clearTimeout(movingThread);
@@ -345,7 +319,7 @@ function gameOver(){
 }
 function pause(){
     if(isPaused){
-        movingThread = setTimeout("moveDown() ",movingSpeed);
+        movingThread = setTimeout("moveDown()",movingSpeed);
         document.getElementById("pause").style.visibility = "hidden";
         document.getElementById("gameField").style.visibility = "visible";
         isPaused = false;
@@ -357,4 +331,3 @@ function pause(){
         isPaused = true;
     }
 }
-

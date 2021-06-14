@@ -7,78 +7,57 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
+
 a,
 a:hover,
 a:active,
 a:visited {
   text-decoration: none;
-  color: black;
+  outline: none;
 }
-iframe {
-  position: absolute;
-  width: 100%;
-  height: 70%;
-  bottom: 0%;
-  border: none;
-}
+
 .title {
   position: fixed;
-  z-index: 3;
-  top: -10%;
-  left: 50%;
-  opacity: 0.7;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
-  font-size: 40px;
-  animation: drop 3s ease-in-out;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: 1000;
+  top: 19%;
+  left: 15%;
+  font-size: 4rem;
+  font-family: "Sigmar One", cursive;
   cursor: pointer;
+  animation: fadeIn 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+.title:hover {
+  color: #a9d18e;
 }
 
-i {
-  font-size: 30px;
-  color: black;
-  margin-left: 15px;
+#introduction {
+  z-index: 1000;
+  opacity: 0;
+  position: absolute;
+  top: 36%;
+  left: 15%;
+  font-size: 1.5rem;
+  font-family: "Gugi", cursive;
+  animation: fadeIn 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
 }
 
-header {
-  display: flex;
-  justify-content: left;
-  align-items: center;
+cite {
+  text-decoration: underline;
+}
+footer {
+  position: absolute;
+  bottom: 0%;
   width: 100%;
-  height: 50px;
-  animation: fadeIn 1s ease-in-out;
-  animation-delay: 4s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes drop {
-  0% {
-    top: -10%;
-  }
-  8% {
-    top: 50%;
-  }
-  16% {
-    top: 25%;
-  }
-  32% {
-    top: 50%;
-  }
-  48% {
-    top: 37.5%;
-  }
-  64% {
-    top: 50%;
-  }
-  80% {
-    top: 44%;
-  }
-  100% {
-    top: 50%;
-  }
+  height: 12%;
+  background-color: #a9d18e;
+  animation: fadeIn 0.5s linear;
 }
 
 @keyframes fadeIn {
@@ -89,3 +68,267 @@ header {
     opacity: 1;
   }
 }
+
+img:not(.dd) {
+  position: absolute;
+}
+
+.building {
+  animation: up 0.5s;
+  animation-fill-mode: forwards;
+}
+#blue-building {
+  width: 12%;
+  bottom: -50%;
+  left: 9%;
+  /* animation: up 0.5s;
+  animation-fill-mode: forwards; */
+  animation-delay: 1.2s;
+}
+@keyframes up {
+  from {
+    bottom: -20%;
+  }
+  to {
+    bottom: 11%;
+  }
+}
+#buildings {
+  width: 20%;
+  bottom: -50%;
+  left: 70%;
+  /* animation: up 0.5s;
+  animation-fill-mode: forwards; */
+  animation-delay: 1.5s;
+}
+
+#yellow-building {
+  width: 8.5%;
+  bottom: -50%;
+  left: 50%;
+  /* animation: up 0.5s;
+  animation-fill-mode: forwards; */
+  animation-delay: 1.6s;
+}
+
+#sun {
+  width: 8.5%;
+  opacity: 0;
+  left: 90%;
+  top: 7%;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
+}
+#sun:hover {
+  transition: transform 1.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+#cloud {
+  width: 8.5%;
+  opacity: 0;
+  left: 5%;
+  top: 7%;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+#clouds {
+  width: 12%;
+  opacity: 0;
+  left: 60%;
+  top: 15%;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.6s;
+}
+@keyframes move {
+  from {
+  }
+  to {
+    left: 0%;
+    top: 0%;
+  }
+}
+
+.buildings-disapear {
+  animation: building-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes building-down {
+  0% {
+    bottom: 11%;
+  }
+  100% {
+    bottom: -45%;
+  }
+}
+.footer-disapear {
+  animation: footer-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes footer-down {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: -45%;
+  }
+}
+
+.title-disapear {
+  animation: title-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes title-down {
+  0% {
+    opacity: 1;
+    top: 19%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+.description-disapear {
+  animation: description-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes description-down {
+  0% {
+    opacity: 1;
+    top: 38%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+.sky-disapear {
+  animation: sky-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes sky-down {
+  0% {
+    opacity: 1;
+    top: 7%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+.clouds-disapear {
+  animation: clouds-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes clouds-down {
+  0% {
+    opacity: 1;
+    top: 15%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+
+.car-disapear {
+  animation: car-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes car-down {
+  0% {
+    left: 25%;
+    bottom: 13%;
+  }
+  100% {
+    left: 25%;
+    bottom: -45%;
+  }
+}
+
+.caricon {
+  position: absolute;
+  left: -20%;
+  bottom: 13%;
+  animation: car 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes car {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 25%;
+  }
+}
+.caricon img {
+  width: 100%;
+}
+.caricon .dd {
+  width: 50%;
+  z-index: 15;
+}
+.caricon .tire01 {
+  position: absolute;
+  bottom: -17%;
+  left: 7.4%;
+  width: 10%;
+  z-index: 3;
+}
+.caricon .tire02 {
+  position: absolute;
+  bottom: -17%;
+  left: 36.5%;
+  width: 10%;
+  z-index: 3;
+}
+
+.tire-rotate {
+  animation: tire-rotate 0.5s linear 3;
+  animation-fill-mode: forwards;
+}
+@keyframes tire-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* #cycle {
+  width: 8.5%;
+  left: -20%;
+  z-index: 2;
+  bottom: 11%;
+  animation: cycle 0.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.cycle-disapear {
+  animation: cycle-down 1.5s ease-in-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes cycle-down {
+  0% {
+    left: 22%;
+    bottom: 11%;
+  }
+  100% {
+    left: 22%;
+    bottom: -45%;
+  }
+}
+@keyframes cycle {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 22%;
+  }
+} */

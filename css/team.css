@@ -3,87 +3,102 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 a,
 a:hover,
 a:active,
 a:visited {
   text-decoration: none;
   color: black;
+  outline: none;
 }
 
 html,
 body {
   width: 100%;
-  height: 120%;
+  height: 100%;
 }
+
 body {
-  /* background-color: #f6f9fc; */
-  background-color: powderblue;
+  overflow: hidden;
+  background-color: #515e7b;
+}
+a #moon {
+  width: 7vw;
+  height: 7vw;
+}
+.card {
+  position: absolute;
+  width: 9vw;
+  height: 9vw;
+  left: -10%;
+  bottom: 15%;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+  background-color: #ced6e0;
+  border-radius: 10%;
 }
-h1 {
-  font-family: "Odibee Sans", cursive;
-  font-size: 40px;
+
+.card img {
+  width: 3.5vw;
+  height: 3.5vw;
 }
-.games-board {
-  width: 1200px;
-  height: 750px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-}
-.card {
-  background-color: #f6f9fc;
-  width: 410px;
-  height: 310px;
-  margin: 30px 50px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+
+.img2048 {
+  width: 3.5vw;
+  height: 3.5vw;
+  background-color: #bbada0;
+  color: #141518;
   text-align: center;
+  line-height: 3.5vw;
+  border-radius: 18%;
+}
+p {
+  margin-top: 5%;
+}
+@keyframes float {
+  0% {
+    bottom: 15%;
+  }
+  50% {
+    /* transform: translateY(30px); */
+    bottom: 21%;
+  }
+  100% {
+    bottom: 15%;
+  }
 }
 
-.card:nth-child(1):hover {
-  border: 3px solid #ff9999;
-}
-.card:nth-child(2):hover {
-  border: 3px solid #ffc25c;
-}
-.card:nth-child(3):hover {
-  border: 3px solid #99da9d;
-}
-.card:nth-child(4):hover {
-  border: 3px solid #99ffff;
+.wave {
+  position: absolute;
+  bottom: 0%;
+  width: 0.4%;
+  height: 15%;
+  /* background-color: #e0eafc; */
+  background-color: #457fca;
 }
 
-h1 {
-  margin-top: 30px;
-  margin-bottom: 50px;
+@keyframes waving {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scaleY(1.8);
+  }
+  100% {
+    transform: none;
+  }
 }
-img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-shadow: 0 1px rgba(50, 50, 93, 0.11);
+
+#moon {
+  position: absolute;
+  left: 90%;
+  top: 7%;
 }
-.game-name {
-  font-family: "Odibee Sans", cursive;
-  font-size: 24px;
-  margin: 10px 0px;
+#moon:hover {
+  transition: transform 1.5s ease-in-out;
+  transform: rotate(360deg);
 }
-h3 {
-  font-family: "Nanum Gothic Coding", monospace;
-}
-/* code {
-  display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 2px;
-  background-color: #d4d4d4;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
-} */

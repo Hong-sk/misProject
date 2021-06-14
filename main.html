@@ -1,33 +1,91 @@
-﻿<!DOCTYPE html>
+﻿<!--
+"Icon made by Freepik from www.flaticon.com"
+"Icon made by monkik from www.flaticon.com"
+"Icon made by iconixar from www.flaticon.com"
+"Icon made by ultimatearm from www.flaticon.com"
+"Icon made by Google from www.flaticon.com"
+"Icon made by Good Ware from www.flaticon.com"
+"Icon made by Vector Market from www.flaticon.com"
+-->
+
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&family=Sigmar+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
-  <body>
-    <header>
-      <a href="https://github.com/Hong-sk/misProject">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://github.com/Hong-sk/misProject">
-        <i class="far fa-user"></i>
-      </a>
-    </header>
 
-    <iframe src="./wave/wave.html"></iframe>
-    <a href="team.html">
-      <div class="title">Simple javascript games</div>
+  <body>
+    <a href="javascript:link('games.html')">
+      <div class="title"><u>Game start</u></div>
     </a>
+    <h2 id="introduction">
+      <p>자바스크립트를 이용해서 간단한 몇 가지 게임을 구현해보았습니다.</p>
+      <br />
+      <p>
+        게임들은
+        <br />
+        <cite>
+          <a href="https://www.youtube.com/channel/UCp-vBtwvBmDiGqjvLjChaJw">
+            제로초님 유튜브
+          </a>
+        </cite>
+        <br />
+        <cite>
+          <a href="https://github.com/yjyoon-dev">yjoons-dev님의 깃허브 </a>
+        </cite>
+        코드를 참고하였습니다.
+      </p>
+      <br />
+      <p>-강원준, 김동현, 홍성권, 홍정기, 황승용-</p>
+    </h2>
+
+    <img src="images/cloud.png" id="cloud" />
+    <img src="images/clouds.png" id="clouds" />
+    <a href="team.html">
+      <img src="images/sun.png" id="sun" />
+    </a>
+    <img src="images/office-building.png" class="building" id="blue-building" />
+    <img src="images/building.png" class="building" id="buildings" />
+    <img src="images/flat.png" class="building" id="yellow-building" />
+    <!-- <img src="images/cycling.png" id="cycle" /> -->
+
+    <div class="car">
+      <div class="caricon">
+        <img src="images/carr.png" class="dd" />
+        <img src="images/wheel.png" class="tire01 tire-rotate dd" />
+        <img src="images/wheel.png" class="tire02 tire-rotate dd" />
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script>
+      function link(URL) {
+        setTimeout(function () {
+          window.location = URL;
+        }, 1700);
+      }
+    </script>
+
     <script
       src="https://kit.fontawesome.com/f41eb0434a.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="javascript/main.js"></script>
   </body>
 </html>
