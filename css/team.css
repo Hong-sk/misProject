@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background-color: #515e7b;
+}
+
+.card {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: -10%;
+  bottom: 15%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+  background-color: #ced6e0;
+  border-radius: 10%;
+}
+.img2048 {
+  width: 50px;
+  height: 50px;
+  background-color: #bbada0;
+  color: #141518;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+}
+p {
+  margin-top: 8px;
+}
+@keyframes float {
+  0% {
+    bottom: 15%;
+  }
+  50% {
+    /* transform: translateY(30px); */
+    bottom: 21%;
+  }
+  100% {
+    bottom: 15%;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: 0%;
+  width: 0.4%;
+  height: 15%;
+  /* background-color: #e0eafc; */
+  background-color: #457fca;
+}
+
+@keyframes waving {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scaleY(1.8);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+#moon {
+  position: absolute;
+  left: 90%;
+  top: 7%;
+}
+#moon:hover {
+  transition: transform 1.5s ease-in-out;
+  transform: rotate(360deg);
+}
