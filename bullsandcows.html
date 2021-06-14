@@ -2,21 +2,23 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>숫자야구
-    </title>
-    <link rel="stylesheet" type="text/css" href="css/bullsandcows.css">
-</head>
-<body>
-    <h1>숫자야구</h1>
-    <h2></h2>
-    <form>
-        <input type="number" />
-        <button>입력!</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자야구</title>
+    <link rel="stylesheet" type="text/css" href="css/bullsandcows.css" />
+  </head>
+  <body>
+    <img class="background" src="images/baseball.jpg" />
+    <div class="score">
+      <h2>Enter Number</h2>
+    </div>
+    <div class="answer-list"></div>
+    <form id="contents">
+      <input type="number" oninput="checkLength(input)" />
+      <button>ENTER</button>
     </form>
-<script src="javascript/bullsandcows.js"></script>
-</body>
+    <script src="javascript/bullsandcows.js"></script>
+  </body>
 </html>
