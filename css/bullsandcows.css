@@ -72,3 +72,30 @@ h2 {
   font-size: 1.2rem;
   margin-right: 10%;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-btn {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  width: 2%;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.left-btn {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 2vw;
+  height: 2vw;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
