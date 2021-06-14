@@ -25,7 +25,7 @@ function game(e) {
   var yourSquare = squares[yourRow].indexOf(e.target);
 
   if (squares[yourRow][yourSquare].textContent !== "") {
-    console.log("빈칸이 아닙니다.");
+    alert("빈칸이 아닙니다.");
   } else {
     squares[yourRow][yourSquare].textContent = turn;
 
